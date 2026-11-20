@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LuxeCuts | Join</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">LUXE<span>CUTS</span></div>
+        <div class="nav-links"><a href="login.html">Login</a></div>
+    </nav>
+
+    <div class="container">
+        <div class="form-box">
+            <h2 style="text-align:center;">Create Account</h2>
+            <form id="signupForm">
+                <label>I am a:</label>
+                <select id="role" onchange="toggleFields()">
+                    <option value="customer">Customer</option>
+                    <option value="staff">Staff Member</option>
+                </select>
+
+                <label>Full Name</label>
+                <input type="text" id="name" required>
+
+                <label>Email</label>
+                <input type="email" id="email" required>
+
+                <label>Phone</label>
+                <input type="text" id="phone" required>
+
+                <label>Password</label>
+                <input type="password" id="password" required>
+
+                <div id="customerFields">
+                    <label>Gender</label>
+                    <select id="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+
+                <div id="staffFields" style="display:none;">
+                    <label>Job Title</label>
+                    <input type="text" id="jobTitle" placeholder="e.g. Senior Stylist">
+                </div>
+
+                <button type="submit" class="btn-red" style="width:100%">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+        function toggleFields() {
+            const role = document.getElementById('role').value;
+            document.getElementById('customerFields').style.display = role === 'customer' ? 'block' : 'none';
+            document.getElementById('staffFields').style.display = role === 'staff' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

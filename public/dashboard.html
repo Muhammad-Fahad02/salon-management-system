@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LuxeCuts | Staff</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">LUXE<span>STAFF</span></div>
+        <div class="nav-links">
+            <a href="#" onclick="logout()">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 id="dashTitle">Daily Schedule</h2>
+        <p style="margin-bottom: 1rem; color: #666;">View upcoming appointments.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Customer Name</th>
+                    <th>Service</th>
+                    <th>Assigned Staff</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="adminTable">
+            </tbody>
+        </table>
+    </div>
+    <script src="js/script.js"></script>
+    <script>loadDashboardTable();</script>
+</body>
+</html>

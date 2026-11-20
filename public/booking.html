@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LuxeCuts | Book</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">LUXE<span>CUTS</span></div>
+        <div class="nav-links">
+            <a href="#" onclick="logout()">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="form-box">
+            <h2 style="text-align:center;">Book Appointment</h2>
+            <form id="bookingForm">
+                
+                <label>Choose Service</label>
+                <select id="serviceSelect" required></select>
+
+                <label>Choose Stylist</label>
+                <select id="staffSelect" required></select>
+
+                <label>Date</label>
+                <input type="date" id="date" required>
+                
+                <label>Time</label>
+                <input type="time" id="time" required>
+
+                <button type="submit" class="btn-red" style="width:100%">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
